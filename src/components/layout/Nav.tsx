@@ -11,6 +11,7 @@ function Nav() {
     <nav className="flex items-center">
       <Button
         onClick={() => setIsOpen(!isOpen)}
+        aria-label={isOpen ? "Закрити меню" : "Відкрити меню"}
         className="relative z-50 w-auto border-0! sm:hidden"
       >
         {isOpen ? (
