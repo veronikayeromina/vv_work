@@ -21,7 +21,7 @@ function VacancyCard({ vacancy }: PropsType) {
         onClick={() => toggleFavorites(vacancy.id)}
         aria-label={isFavorite ? "Видалити з обраного" : "Додати в обране"}
         aria-pressed={isFavorite}
-        className="absolute top-3 right-3 text-lg text-(--text) transition-colors hover:text-(--accent)"
+        className="absolute top-3 right-3 cursor-pointer text-lg text-(--text) transition hover:text-(--accent) active:scale-90"
       >
         {isFavorite ? <FaHeart className="text-(--accent)" /> : <FaRegHeart />}
       </button>
