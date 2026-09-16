@@ -11,6 +11,7 @@ import useAsyncData from "../hooks/useAsyncData";
 import fakeApi from "../api/fakeApi";
 import RetryBlock from "../components/ui/RetryBlock";
 import Skeleton from "../components/ui/Skeleton";
+import usePageMeta from "../hooks/usePageMeta";
 
 function PartnerPage() {
   const [search, setSearch] = useState("");
@@ -26,6 +27,13 @@ function PartnerPage() {
   }, [slug]);
 
   const { data: partner, status, error, refetch } = useAsyncData(fetcher);
+
+  usePageMeta(
+    partner ? `${partner.name} — Вакансії | VV Work` : "Партнер | VV Work",
+    partner
+      ? `Актуальні вакансії від ${partner.name} на платформі VV Work.`
+      : "Вакансії від партнера VV Work.",
+  );
 
   if (status === "loading") {
     return <Skeleton />;

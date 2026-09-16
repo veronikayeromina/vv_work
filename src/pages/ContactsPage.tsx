@@ -1,6 +1,12 @@
 import ApplicationForm from "../components/application-form/ApplicationForm";
+import usePageMeta from "../hooks/usePageMeta";
 
 function ContactsPage() {
+  usePageMeta(
+    "Контакти | VV Work",
+    "Зв'яжіться з VV Work — телефон, email, офіс та форма заявки для роботодавців.",
+  );
+
   return (
     <div className="px-4 py-12 sm:px-8">
       <h1>Контакти</h1>
