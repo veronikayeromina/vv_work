@@ -60,9 +60,9 @@ src/
 
 ## Lighthouse (продакшн-білд, Головна сторінка)
 
-![Lighthouse — Performance 91, Accessibility 100, Best Practices 100, SEO 100](./docs/lighthouse.png)
+![Lighthouse — Performance 96, Accessibility 100, Best Practices 100, SEO 100](./docs/lighthouse.png)
 
-Performance 91 / Accessibility 100 / Best Practices 100 / SEO 100 (мобільний профіль, https://vvwork.vercel.app/).
+Performance 96 / Accessibility 100 / Best Practices 100 / SEO 100 (мобільний профіль, прод-білд).
 
 ## Мої рішення
 
