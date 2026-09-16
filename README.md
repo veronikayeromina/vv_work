@@ -40,7 +40,7 @@ src/
     vacancies/      VacancyList, VacancyCard (React.memo)
     application-form/ ApplicationForm
     ui/             Input, Button, Skeleton, RetryBlock — перевикористовувані примітиви
-  hooks/          useDebounce, useCategoryFilter, useAsyncData
+  hooks/          useDebounce, useCategoryFilter, useAsyncData, usePageMeta, useTheme
   api/            fakeApi.ts — мокова fetch-обгортка (затримка 300–800мс + ~20% помилка)
   utils/          validators.ts — чисті функції валідації форми
   types/          типи + мокові дані (Category, Vacancy, Partner)
@@ -76,3 +76,5 @@ TODO: вставити скріншот сюди (Performance 92 / Accessibility
 - **Посилання без реальної сторінки** (частина пунктів Header/Footer — "Про нас", "Політика конфіденційності" тощо) залишені неактивними (звичайний текст), а не ведуть в нікуди чи на Головну — чесніше показувати, що сторінки немає, ніж імітувати робоче посилання.
 - **Контакти доступні за `/contacts`, а не кириличним `/контакти`** — технічне спрощення роутингу, зміст сторінки той самий.
 - **Понад бриф**: lazy-loading сторінок партнера й контактів (`React.lazy`/`Suspense`) для зменшення початкового бандла Головної — впливає на Lighthouse Performance.
+- **Понад бриф**: динамічні `<title>`/`<meta name="description">` для кожної сторінки (`usePageMeta`) — для сторінки партнера заголовок включає назву партнера. Впливає на SEO-показник Lighthouse.
+- **Понад бриф**: ручне перемикання світлої/темної теми (кнопка в Header, `useTheme`), окрім автоматичної через `prefers-color-scheme` — вибір зберігається в `localStorage`.
