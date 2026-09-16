@@ -21,22 +21,22 @@ function Nav() {
         )}
       </Button>
 
-      {isOpen && (
+      <div
+        onClick={() => setIsOpen(false)}
+        className={`fixed inset-0 z-40 flex items-center justify-center bg-black/30 px-6 backdrop-blur-sm transition-opacity duration-200 sm:hidden ${
+          isOpen ? "opacity-100" : "pointer-events-none opacity-0"
+        }`}
+      >
         <div
-          onClick={() => setIsOpen(false)}
-          className="fixed inset-0 z-40 flex items-center justify-center bg-black/30 px-6 backdrop-blur-sm sm:hidden"
+          onClick={e => e.stopPropagation()}
+          className="flex w-full max-w-sm flex-col gap-6 p-8 text-center"
         >
-          <div
-            onClick={e => e.stopPropagation()}
-            className="flex w-full max-w-sm flex-col gap-6 p-8 text-center"
-          >
-            <NavLinks
-              className="text-xl font-semibold"
-              onLinkClick={() => setIsOpen(false)}
-            />
-          </div>
+          <NavLinks
+            className="text-xl font-semibold"
+            onLinkClick={() => setIsOpen(false)}
+          />
         </div>
-      )}
+      </div>
 
       <div className="hidden sm:flex sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6">
         <NavLinks />
