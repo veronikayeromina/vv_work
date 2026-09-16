@@ -14,8 +14,6 @@ function Header() {
       <Logo />
 
       <div className="flex flex-wrap items-center gap-4">
-        <Nav />
-
         <Button
           onClick={toggleTheme}
           className="w-auto! min-w-0! px-3 py-1.5 text-sm"
@@ -28,6 +26,8 @@ function Header() {
           <span aria-hidden="true">{favorites.length > 0 && favorites.length}</span>
           <span className="sr-only">У обраному: {favorites.length}</span>
         </span>
+
+        <Nav />
       </div>
     </header>
   );

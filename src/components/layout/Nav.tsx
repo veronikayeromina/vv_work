@@ -30,7 +30,10 @@ function Nav() {
             onClick={e => e.stopPropagation()}
             className="flex w-full max-w-sm flex-col gap-6 p-8 text-center"
           >
-            <NavLinks className="text-xl font-semibold" />
+            <NavLinks
+              className="text-xl font-semibold"
+              onLinkClick={() => setIsOpen(false)}
+            />
           </div>
         </div>
       )}
