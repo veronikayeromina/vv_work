@@ -53,6 +53,11 @@ function PartnerPage() {
       (selectedCategory === null || el.category === selectedCategory),
   );
 
+  function onReset() {
+    setSelectedCategory(null);
+    setSearch("");
+  }
+
   return (
     <div className="flex flex-col gap-6 px-4 py-8 sm:px-8">
       <Input
@@ -86,7 +91,7 @@ function PartnerPage() {
         ))}
       </div>
 
-      <VacancyList vacancies={filteredVacancy} />
+      <VacancyList vacancies={filteredVacancy} onReset={onReset} />
     </div>
   );
 }
