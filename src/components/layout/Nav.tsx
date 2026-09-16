@@ -12,7 +12,7 @@ function Nav() {
       <Button
         onClick={() => setIsOpen(!isOpen)}
         aria-label={isOpen ? "Закрити меню" : "Відкрити меню"}
-        className="relative z-50 w-auto border-0! sm:hidden"
+        className="relative z-50 w-auto! border-0! sm:hidden"
       >
         {isOpen ? (
           <IoIosClose className="text-white" size={28} />

@@ -18,7 +18,7 @@ function Header() {
 
         <Button
           onClick={toggleTheme}
-          className="w-auto min-w-0! px-3 py-1.5 text-sm"
+          className="w-auto! min-w-0! px-3 py-1.5 text-sm"
         >
           {theme === "dark" ? "☀️" : "🌙"}
         </Button>
