@@ -25,7 +25,7 @@ npm run test -- --coverage  # тести з підрахунком покрит�
 
 ## Деплой
 
-TODO: вставити посилання на Vercel
+https://vvwork.vercel.app/
 
 ## Архітектура
 
@@ -60,7 +60,9 @@ src/
 
 ## Lighthouse (продакшн-білд, Головна сторінка)
 
-TODO: вставити скріншот сюди (Performance 92 / Accessibility 100 / Best Practices 100 / SEO 82 на момент здачі)
+![Lighthouse — Performance 91, Accessibility 100, Best Practices 100, SEO 100](./docs/lighthouse.png)
+
+Performance 91 / Accessibility 100 / Best Practices 100 / SEO 100 (мобільний профіль, https://vvwork.vercel.app/).
 
 ## Мої рішення
 
