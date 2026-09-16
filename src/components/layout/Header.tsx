@@ -23,12 +23,10 @@ function Header() {
           {theme === "dark" ? "☀️" : "🌙"}
         </Button>
 
-        <span
-          className="flex items-center gap-1 text-sm text-(--text)"
-          aria-label={`У обраному: ${favorites.length}`}
-        >
+        <span className="flex items-center gap-1 text-sm text-(--text)">
           <FaHeart className="text-(--accent)" aria-hidden="true" />
-          {favorites.length > 0 && favorites.length}
+          <span aria-hidden="true">{favorites.length > 0 && favorites.length}</span>
+          <span className="sr-only">У обраному: {favorites.length}</span>
         </span>
       </div>
     </header>
