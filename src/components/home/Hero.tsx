@@ -11,7 +11,7 @@ function Hero() {
       <div className="mt-8 flex flex-col items-center gap-3 sm:mt-10 sm:flex-row sm:justify-center sm:gap-4">
         <a
           href="#categories"
-          className="w-full rounded-md bg-[var(--accent)] px-6 py-3 text-center font-medium text-white transition-opacity hover:opacity-90 sm:w-auto"
+          className="w-full rounded-md bg-[var(--accent)] px-6 py-3 text-center font-medium text-(--on-accent) transition-opacity hover:opacity-90 sm:w-auto"
         >
           Знайти роботу
         </a>

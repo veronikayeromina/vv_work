@@ -17,7 +17,7 @@ function EmployerCTA() {
 
       <Link
         to={ROUTES.contacts}
-        className="mt-8 inline-block rounded-md bg-(--accent) px-6 py-3 font-medium text-white transition-opacity hover:opacity-90"
+        className="mt-8 inline-block rounded-md bg-(--accent) px-6 py-3 font-medium text-(--on-accent) transition-opacity hover:opacity-90"
       >
         Знайти працівника
       </Link>
